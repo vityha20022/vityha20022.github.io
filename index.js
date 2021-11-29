@@ -16,7 +16,7 @@ function store(){
         window.alert("Input your username!");
     }else{
         localStorage["snake.username"] = input.value;
-        window.location.href = "./index.html";
+        window.location.href = "./main.html";
     }
 }
 
