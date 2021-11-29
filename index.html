@@ -1,46 +1,55 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset=utf-8>
+    <meta charset="UTF-8">
+    <title>Snake</title>
     <style>
         body {
-            background: black;
+            background: chartreuse;
         }
-        form
+
+        #recordsTable{
+            font-size: 15px;
+            width: 300px;
+            position: fixed;
+        }
+
+        #info {
+            position: absolute;
+        }
+
+        #restart
         {
-            text-align: center;
+            position: absolute;
+            margin-left: 55%;
+            margin-top: 20px;
         }
-        input
-        {
-            outline: none;
+
+        #exit {
+            position: absolute;
+            margin-left: 49%;
+            margin-top: 20px;
         }
-        input.largerButton
-        {
-            width: 60px;
-            height: 35px;
+
+        table {
+            width: 300px;
         }
+        td {
+            overflow:hidden;
+        }
+
     </style>
 </head>
-<body onload="read()">
-
-    <h1 align="center">
-        <span style="color: red">S</span><span style="color: orange">N</span><span style="color:
-                     yellow">A</span><span style="color: green">K</span><span style="color: cyan">E</span>
-    </h1>
-
-    <form action="main.html" method="get">
-        <label style="color: blue; font-size: 20px">
-            Enter name:<br>
-            <input id="username" placeholder="User name" required>
-        </label>
-        <p align="center"><input style="background: yellow; color: blue; font-size: 20px"
-                                 type="button" class="largerButton"
-                                  value="GO!" onclick="store()"></p>
-        <label style="color: blue; font-size: 15px">
-            Remember me <input id="rememberMe" type="checkbox">
-        </label>
-    </form>
-
-    <script src="index.js"></script>
+<body>
+<div id="info">
+    <div id = "records">
+        <p style="font-size: 25px">Table records:</p>
+        <div id="recordsTable"></div>
+    </div>
+</div>
+<canvas id="canvasId" width="1000" height="600" style="border: 1px solid black; margin-left: 300px"></canvas>
+<p align=center id = "exit"><button onclick="window.location='startPage.html'">Exit</button></p>
+<p align=center id = "restart"><button onclick="window.location='index.html'">Restart</button></p>
+<script src="main.js"></script>
 </body>
 </html>
